@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>99cure Healthcare</title>
+  <title>Home - 99cure Healthcare</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Basic Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      background-color: #f0f8ff;
     }
 
     header {
@@ -86,21 +85,30 @@
       text-align: center;
     }
 
-    .hero {
-      padding: 3rem 1rem;
-      background: #eaf4ff;
-      border-radius: 12px;
-    }
-
-    .hero h1 {
-      color: #007BFF;
+    .content h2 {
       font-size: 2.5rem;
+      color: #007BFF;
       margin-bottom: 1rem;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: #333;
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -128,11 +136,16 @@
 </header>
 
 <main>
-  <section class="hero">
-    <h1>Welcome to 99cure Healthcare</h1>
-    <p>Your trusted partner in affordable and quality health services. Book appointments, explore packages, and connect with expert doctors easily.</p>
-  </section>
+  <div class="content">
+    <h2>Welcome to 99cure Healthcare</h2>
+    <p>Your health, our priority. Explore our services and book an appointment today!</p>
+  </div>
 </main>
+
+<!-- WhatsApp Chat Button -->
+<a href="https://wa.me/919105179774" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+</a>
 
 <script>
   function toggleMenu() {
