@@ -3,118 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services - 99cure Healthcare</title>
+  <title>Services - 99cure Healthcare</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #007BFF;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
+    /* Same CSS as index.html for the WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
       cursor: pointer;
     }
 
-    .hamburger div {
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      width: 25px;
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: #007BFF;
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
     }
-
-    main {
-      padding: 2rem;
-    }
-
-    .services-section {
-      max-width: 900px;
-      margin: auto;
-      background: #f5faff;
-      padding: 2rem;
-      border-radius: 12px;
-    }
-
-    .services-section h2 {
-      color: #007BFF;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      color: #007BFF;
-      font-size: 1.5rem;
-    }
-
-    .service-card p {
-      color: #333;
-    }
-
   </style>
 </head>
 <body>
@@ -141,26 +52,14 @@
 </header>
 
 <main>
-  <section class="services-section">
-    <h2>Our Healthcare Services</h2>
-    <div class="service-card">
-      <h3>General Checkup</h3>
-      <p>Our general checkups are designed to detect early signs of any health conditions and keep your body in optimal condition.</p>
-    </div>
-    <div class="service-card">
-      <h3>Specialized Treatments</h3>
-      <p>We offer specialized treatments tailored to your individual needs, ensuring the best care for conditions that require expert attention.</p>
-    </div>
-    <div class="service-card">
-      <h3>Diagnostic Services</h3>
-      <p>We provide comprehensive diagnostic services using state-of-the-art equipment to accurately identify your health status.</p>
-    </div>
-    <div class="service-card">
-      <h3>Emergency Care</h3>
-      <p>In case of medical emergencies, our team is ready 24/7 to provide life-saving care and rapid intervention.</p>
-    </div>
-  </section>
+  <h2>Our Services</h2>
+  <p>We offer a wide range of healthcare services tailored to meet the needs of our patients.</p>
 </main>
+
+<!-- WhatsApp Chat Button -->
+<a href="https://wa.me/919105179774" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+</a>
 
 <script>
   function toggleMenu() {
