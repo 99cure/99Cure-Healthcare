@@ -6,101 +6,25 @@
   <title>About Us - 99cure Healthcare</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #007BFF;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
+    /* Same CSS as index.html for the WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
       cursor: pointer;
     }
 
-    .hamburger div {
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      width: 25px;
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: #007BFF;
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    .about-section {
-      max-width: 900px;
-      margin: auto;
-      background: #f5faff;
-      padding: 2rem;
-      border-radius: 12px;
-    }
-
-    .about-section h2 {
-      color: #007BFF;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-section p {
-      color: #333;
-      margin-bottom: 1rem;
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -128,13 +52,14 @@
 </header>
 
 <main>
-  <section class="about-section">
-    <h2>About 99cure Healthcare</h2>
-    <p>At 99cure Healthcare, we are committed to making healthcare more accessible, affordable, and trustworthy. Our mission is to offer high-quality medical services that prioritize your health and convenience.</p>
-    <p>Founded with a vision to simplify the healthcare experience, we bring together expert doctors, advanced diagnostics, and seamless appointment booking under one digital platform.</p>
-    <p>With a focus on patient-first care and innovative solutions, 99cure Healthcare is your partner in wellness and prevention. Whether it's routine checkups or specialized treatments, we’re here to support you every step of the way.</p>
-  </section>
+  <h2>About Us</h2>
+  <p>We are dedicated to providing high-quality healthcare services to our community.</p>
 </main>
+
+<!-- WhatsApp Chat Button -->
+<a href="https://wa.me/919105179774" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+</a>
 
 <script>
   function toggleMenu() {
