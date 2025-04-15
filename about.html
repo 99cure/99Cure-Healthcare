@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - 99cure Healthcare</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-   body {
+    body {
       font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #2e7d32;
@@ -21,7 +20,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
 
     .logo {
       font-size: 1.5rem;
@@ -80,7 +78,25 @@
 
     main {
       padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
       text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 0.75rem;
     }
 
     .whatsapp-float {
@@ -88,7 +104,6 @@
       bottom: 20px;
       right: 20px;
       z-index: 100;
-      cursor: pointer;
     }
 
     .whatsapp-float img {
@@ -96,11 +111,6 @@
       height: 55px;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float img:hover {
-      transform: scale(1.1);
     }
   </style>
 </head>
@@ -120,22 +130,37 @@
       <a href="signup.html">Sign Up</a>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
   </nav>
 </header>
 
 <main>
-  <h2>About Us</h2>
-  <p>We are dedicated to providing high-quality healthcare services to our community with care, compassion, and commitment.</p>
+  <h1>About Us</h1>
+  <p>
+    99cure Healthcare is committed to delivering high-quality, affordable healthcare to everyone. 
+    We provide a variety of medical services and diagnostic solutions with a team of experienced professionals 
+    and cutting-edge technology.
+  </p>
+  <p>
+    Our mission is to make healthcare accessible, convenient, and reliable. Whether it’s regular checkups, lab tests, 
+    or advanced diagnostics — we’re here to serve with care and excellence.
+  </p>
 </main>
 
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
 </a>
+
+<footer>
+  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" /></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" /></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" /></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X" /></a>
+  </div>
+</footer>
 
 <script>
   function toggleMenu() {
