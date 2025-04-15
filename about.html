@@ -6,178 +6,166 @@
   <title>About Us - 99cure Healthcare</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #2e7d32;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8cc;
     }
 
     header {
-      background-color: #007BFF;
-      color: white;
-      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      background-color: #003366;
+      padding: 10px 20px;
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav {
       display: flex;
       align-items: center;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
+    .logo img {
+      height: 50px;
+      border-radius: 8px;
     }
 
-    .nav-links a {
+    .logo span {
+      color: white;
+      font-size: 1.8rem;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      width: 25px;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: #007BFF;
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 1000px;
+    .main {
+      padding: 40px 20px;
+      max-width: 900px;
       margin: auto;
+      background: white;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    footer {
-      background-color: #007BFF;
-      color: white;
-      padding: 2rem 1rem;
+    .main h1 {
+      color: #003366;
       text-align: center;
     }
 
-    .social-icons img {
-      width: 32px;
-      margin: 0 0.75rem;
+    .main p {
+      color: #333;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 100;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
 
-    .whatsapp-float img {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
     }
   </style>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
-  <div class="logo" style="display: flex; align-items: center;">
-    <img src="logo.png.jpg" alt="99cure Logo" style="height: 50px; border-radius: 8px;">
-    <span style="color: white; font-size: 1.8rem; margin-left: 10px;">99cure Healthcare</span>
-  <nav>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallary.html">Gallery</a>
-      <a href="appointment.html">Appointment</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png.jpg" alt="99cure Logo">
+      <span>99cure Healthcare</span>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-  </nav>
-</header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <h1>About Us</h1>
-  <p>
-    99cure Healthcare is committed to delivering high-quality, affordable healthcare to everyone. 
-    We provide a variety of medical services and diagnostic solutions with a team of experienced professionals 
-    and cutting-edge technology.
-  </p>
-  <p>
-    Our mission is to make healthcare accessible, convenient, and reliable. Whether it’s regular checkups, lab tests, 
-    or advanced diagnostics — we’re here to serve with care and excellence.
-  </p>
-</main>
-
-<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
-</a>
-
-<footer>
-  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/yourhandle" target="_blank">
-      <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com/yourhandle" target="_blank">
-      <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-    </a>
-    <a href="https://www.youtube.com/yourchannel" target="_blank">
-      <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-    </a>
-    <a href="https://twitter.com/yourhandle" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X (Twitter)" />
-    </a>
+  <!-- Main Content -->
+  <div class="main">
+    <h1>About Us</h1>
+    <p>
+      At <strong>99cure Healthcare</strong>, we are dedicated to delivering top-quality diagnostic and wellness services. Our mission is to empower individuals with accurate and timely health insights, supported by cutting-edge technology and a patient-first approach.
+    </p>
+    <p>
+      We offer a wide range of services including pathology, radiology, preventive health checkups, and specialized diagnostic tests. Our team comprises experienced professionals committed to excellence and compassionate care.
+    </p>
+    <p>
+      Our centers are equipped with modern infrastructure and tools to ensure a seamless experience for patients — from test booking to result delivery. At 99cure, we believe that affordable healthcare should be accessible to all.
+    </p>
+    <p>
+      Thank you for trusting us with your health.
+    </p>
   </div>
-  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
-</footer>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/9211317319" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow us on:</p>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
