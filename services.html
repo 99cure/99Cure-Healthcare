@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services - 99cure Healthcare</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Our Services - 99cure Healthcare</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -77,9 +76,49 @@
       }
     }
 
-    main {
-      padding: 2rem;
+    h1 {
       text-align: center;
+      margin: 2rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem 3rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: #f1f8e9;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .service-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      margin: 0.5rem 0 1rem;
+    }
+
+    .service-card button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .service-card button:hover {
+      background-color: #256b28;
     }
 
     .whatsapp-float {
@@ -87,7 +126,6 @@
       bottom: 20px;
       right: 20px;
       z-index: 100;
-      cursor: pointer;
     }
 
     .whatsapp-float img {
@@ -95,11 +133,18 @@
       height: 55px;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
     }
 
-    .whatsapp-float img:hover {
-      transform: scale(1.1);
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 0.75rem;
     }
   </style>
 </head>
@@ -119,22 +164,126 @@
       <a href="signup.html">Sign Up</a>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
   </nav>
 </header>
 
-<main>
-  <h2>Our Services</h2>
-  <p>We provide a wide range of medical services including diagnostics, consultation, treatment, and home care tailored to your needs.</p>
-</main>
+<h1>Our Services</h1>
 
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+<div class="services-grid">
+  <!-- Service cards -->
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/mri.png" alt="MRI">
+    <h3>MRI Scan</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/computer.png" alt="CT Scan">
+    <h3>CT Scan</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/ultrasound.png" alt="Ultrasound">
+    <h3>Ultrasound</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/x-ray.png" alt="X-Ray">
+    <h3>Digital X-Ray</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/breast.png" alt="Mammography">
+    <h3>Mammography</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/bone.png" alt="Bone DEXA">
+    <h3>Bone DEXA</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/ekg.png" alt="ECG">
+    <h3>ECG</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/heart-monitor.png" alt="Echo">
+    <h3>Echo</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/treadmill.png" alt="TMT">
+    <h3>TMT</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/brain.png" alt="EEG">
+    <h3>EEG</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/nerves.png" alt="NCV">
+    <h3>NCV</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/muscle.png" alt="EMG">
+    <h3>EMG</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/test-tube.png" alt="Pathology">
+    <h3>Pathology Tests</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/lungs.png" alt="PFT">
+    <h3>Pulmonary Function Test (PFT)</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/jaw.png" alt="OPG">
+    <h3>OPG</h3>
+    <button>Book Test Now</button>
+  </div>
+
+  <div class="service-card">
+    <img src="https://img.icons8.com/ios-filled/50/toilet.png" alt="Uroflowmetry">
+    <h3>Uroflowmetry</h3>
+    <button>Book Test Now</button>
+  </div>
+</div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
 </a>
+
+<footer>
+  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" /></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" /></a>
+    <a href="#"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" /></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X" /></a>
+  </div>
+</footer>
 
 <script>
   function toggleMenu() {
