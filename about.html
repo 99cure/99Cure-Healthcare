@@ -1,127 +1,146 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>About Us - 99cure Healthcare</title>
-   <style>
-     body {
-       font-family: Arial, sans-serif;
-       background-color: #ffffff;
-       color: #2e7d32;
-       margin: 0;
-     }
- 
-     header {
-       background-color: #007BFF;
-       color: white;
-       padding: 1rem 2rem;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-     }
- 
-     .logo {
-       font-size: 1.5rem;
-       font-weight: bold;
-     }
- 
-     nav {
-       display: flex;
-       align-items: center;
-     }
- 
-     .nav-links {
-       display: flex;
-       gap: 1.2rem;
-     }
- 
-     .nav-links a {
-       color: white;
-       text-decoration: none;
-       font-weight: 500;
-     }
- 
-      .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto; /* Push to the right */
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - 99cure Healthcare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #2e7d32;
+      margin: 0;
+    }
 
-.hamburger div {
-  height: 3px;
-  background: gold; /* Golden color */
-  margin: 4px 0;
-  width: 25px;
- 
-     @media (max-width: 768px) {
-       .nav-links {
-         display: none;
-         flex-direction: column;
-         position: absolute;
-         top: 70px;
-         right: 20px;
-         background: #007BFF;
-         padding: 1rem;
-         border-radius: 8px;
-       }
- 
-       .nav-links.active {
-         display: flex;
-       }
- 
-       .hamburger {
-         display: flex;
-       }
-     }
- 
-     main {
-       padding: 2rem;
-       max-width: 1000px;
-       margin: auto;
-     }
- 
-     h1 {
-       text-align: center;
-       margin-bottom: 2rem;
-     }
- 
-     footer {
-       background-color: #007BFF;
-       color: white;
-       padding: 2rem 1rem;
-       text-align: center;
-     }
- 
-     .social-icons img {
-       width: 32px;
-       margin: 0 0.75rem;
-     }
- 
-     .whatsapp-float {
-       position: fixed;
-       bottom: 20px;
-       right: 20px;
-       z-index: 100;
-     }
- 
-     .whatsapp-float img {
-       width: 55px;
-       height: 55px;
-       border-radius: 50%;
-       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-     }
-   </style>
- </head>
- <body>
- 
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 70px;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 1.8rem;
+      margin-left: 10px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background: gold;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #007BFF;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 0.75rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
 <header>
-  <div class="logo" style="display: flex; align-items: center;">
-    <img src="logo.png.jpg" alt="99cure Logo" style="height: 70px; border-radius: 8px;">
-    <span style="color: white; font-size: 1.8rem; margin-left: 8px;">99cure Healthcare</span>
+  <div class="logo">
+    <img src="logo.png.jpg" alt="99cure Logo">
+    <span>99cure Healthcare</span>
   </div>
-  <nav style="display: flex; align-items: center;">
+  <nav>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -139,47 +158,57 @@
     </div>
   </nav>
 </header>
- 
- <main>
-   <h1>About Us</h1>
-   <p>
-     99cure Healthcare is committed to delivering high-quality, affordable healthcare to everyone. 
-     We provide a variety of medical services and diagnostic solutions with a team of experienced professionals 
-     and cutting-edge technology.
-   </p>
-   <p>
-     Our mission is to make healthcare accessible, convenient, and reliable. Whether it’s regular checkups, lab tests, 
-     or advanced diagnostics — we’re here to serve with care and excellence.
-   </p>
- </main>
- 
- <a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
-   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
- </a>
- 
- <footer>
-   <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
-   <div class="social-icons">
-     <a href="https://www.instagram.com/yourhandle" target="_blank">
-       <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-     </a>
-     <a href="https://www.facebook.com/yourhandle" target="_blank">
-       <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-     </a>
-     <a href="https://www.youtube.com/yourchannel" target="_blank">
-       <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-     </a>
-     <a href="https://twitter.com/yourhandle" target="_blank">
-       <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X (Twitter)" />
-     </a>
-   </div>
- </footer>
- 
- <script>
-   function toggleMenu() {
-     document.getElementById("navLinks").classList.toggle("active");
-   }
- </script>
- 
- </body>
- </html>
+
+<main>
+  <h1>About Us</h1>
+  <p>
+    At 99cure Healthcare, we are dedicated to providing high-quality and affordable medical services. 
+    With state-of-the-art diagnostic technology and a team of experienced healthcare professionals, 
+    we aim to bring you reliable care with compassion and efficiency.
+  </p>
+
+  <h2>Our Mission</h2>
+  <p>
+    Our mission is to make quality healthcare accessible to all. We strive to deliver 
+    accurate diagnostics, timely care, and trustworthy service at the most affordable prices. 
+    Our goal is to build a healthier community through innovation and commitment.
+  </p>
+
+  <h2>Our Vision</h2>
+  <p>
+    We envision a future where no one is denied medical attention due to affordability or access. 
+    Through our integrated approach, we aim to become the most trusted name in diagnostic and preventive care 
+    across the region.
+  </p>
+</main>
+
+<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+</a>
+
+<footer>
+  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/yourhandle" target="_blank">
+      <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/yourhandle" target="_blank">
+      <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
+    </a>
+    <a href="https://www.youtube.com/yourchannel" target="_blank">
+      <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
+    </a>
+    <a href="https://twitter.com/yourhandle" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X (Twitter)" />
+    </a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
