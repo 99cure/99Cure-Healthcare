@@ -42,18 +42,18 @@
        font-weight: 500;
      }
  
-     .hamburger {
-       display: none;
-       flex-direction: column;
-       cursor: pointer;
-     }
- 
-     .hamburger div {
-       height: 3px;
-       background: white;
-       margin: 4px 0;
-       width: 25px;
-     }
+      .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* Push to the right */
+}
+
+.hamburger div {
+  height: 3px;
+  background: gold; /* Golden color */
+  margin: 4px 0;
+  width: 25px;
  
      @media (max-width: 768px) {
        .nav-links {
@@ -116,27 +116,29 @@
  </head>
  <body>
  
- <header>
-   <div class="logo" style="display: flex; align-items: center;">
+<header>
+  <div class="logo" style="display: flex; align-items: center;">
     <img src="logo.png.jpg" alt="99cure Logo" style="height: 70px; border-radius: 8px;">
     <span style="color: white; font-size: 1.8rem; margin-left: 8px;">99cure Healthcare</span>
   </div>
-   <nav>
-     <div class="nav-links" id="navLinks">
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="services.html">Services</a>
-       <a href="gallary.html">Gallery</a>
-       <a href="appointment.html">Appointment</a>
-       <a href="contact.html">Contact</a>
-       <a href="login.html">Login</a>
-       <a href="signup.html">Sign Up</a>
-     </div>
-     <div class="hamburger" onclick="toggleMenu()">
-       <div></div><div></div><div></div>
-     </div>
-   </nav>
- </header>
+  <nav style="display: flex; align-items: center;">
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallary.html">Gallery</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
  
  <main>
    <h1>About Us</h1>
