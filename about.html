@@ -209,10 +209,21 @@
 
  
  <script>
-   function toggleMenu() {
-     document.getElementById("navLinks").classList.toggle("active");
-   }
- </script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+
+  // Close menu on nav link click (for mobile)
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  });
+</script>
+
 
 <!-- Quick Link Section -->
 <section style="background-color: #f1f8e9; padding: 2rem;">
