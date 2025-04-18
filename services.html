@@ -43,30 +43,30 @@
     }
 
     .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto; /* Push to the right */
-}
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
 
-.hamburger div {
-  height: 3px;
-  background: gold; /* Golden color */
-  margin: 4px 0;
-  width: 25px;
-}
+    .hamburger div {
+      height: 3px;
+      background: gold;
+      margin: 4px 0;
+      width: 25px;
+    }
 
-   @media (max-width: 768px) {
-       .nav-links {
-         display: none;
-         flex-direction: column;
-         position: absolute;
-         top: 50px;
-         right: 10px;
-         background: #007BFF;
-         padding: 1rem;
-         border-radius: 6px;
-       }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #007BFF;
+        padding: 1rem;
+        border-radius: 6px;
+      }
 
       .nav-links.active {
         display: flex;
@@ -82,115 +82,52 @@
       margin: 2rem 0;
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 0 2rem 3rem;
-      max-width: 1200px;
-      margin: auto;
+    .dropdown {
+      position: relative;
     }
 
-    .service-card {
-      background: #f1f8e9;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .service-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      margin: 0.5rem 0 1rem;
-    }
-
-    .service-card button {
-      background-color: #2e7d32;
+    .dropbtn {
       color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
       cursor: pointer;
     }
 
-    .service-card button:hover {
-      background-color: #256b28;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: #000;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 999;
+      top: 100%;
+      left: 0;
+      border-radius: 6px;
+      overflow: hidden;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
+    .dropdown-content a {
+      color: #0f3f84;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
     }
 
-    .whatsapp-float img {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
-    footer {
-      background-color: #007BFF;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
+    .dropdown-submenu {
+      position: relative;
     }
 
-    .social-icons img {
-      width: 32px;
-      margin: 0 0.75rem;
+    .dropdown-submenu .dropdown-content {
+      top: 0;
+      left: 100%;
+      margin-left: 1px;
     }
-    /* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  color: #000;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 999;
-  top: 100%;
-  left: 0;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.dropdown-content a {
-  color: #0f3f84;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-weight: 500;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
   </style>
 </head>
 <body>
@@ -204,16 +141,49 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-     <div class="dropdown">
-  <a href="services.html" class="dropbtn">Services ▾</a>
-  <div class="dropdown-content">
-    <a href="#">Radiology Department</a>
-    <a href="#">Pathology Department</a>
-    <a href="#">Cardiology Department</a>
-    <a href="#">Neurology Department</a>
-    <a href="#">Other Test</a>
-  </div>
-</div>
+      <div class="dropdown">
+        <a class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <div class="dropdown-submenu">
+            <a href="#">Radiology Department ▸</a>
+            <div class="dropdown-content">
+              <a href="#">MRI</a>
+              <a href="#">CT Scan</a>
+              <a href="#">Ultrasound</a>
+              <a href="#">X-Ray</a>
+              <a href="#">Mammography</a>
+              <a href="#">Bone DEXA</a>
+              <a href="#">OPG</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu">
+            <a href="#">Pathology Department ▸</a>
+            <div class="dropdown-content">
+              <a href="#">Blood Tests</a>
+              <a href="#">Urine Tests</a>
+              <a href="#">Biochemistry</a>
+              <a href="#">Microbiology</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu">
+            <a href="#">Cardiology Department ▸</a>
+            <div class="dropdown-content">
+              <a href="#">ECG</a>
+              <a href="#">Echo</a>
+              <a href="#">TMT</a>
+            </div>
+          </div>
+          <div class="dropdown-submenu">
+            <a href="#">Neurology Department ▸</a>
+            <div class="dropdown-content">
+              <a href="#">EEG</a>
+              <a href="#">NCV</a>
+              <a href="#">EMG</a>
+            </div>
+          </div>
+          <a href="#">Other Tests</a>
+        </div>
+      </div>
       <a href="gallary.html">Gallery</a>
       <a href="appointment.html">Appointment</a>
       <a href="contact.html">Contact</a>
@@ -229,182 +199,16 @@
 </header>
 
 <h1>Our Services</h1>
-<div class="services-grid">
-  <!-- Service cards -->
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/mri.png" alt="MRI">
-    <h3>MRI Scan</h3>
-    <button>Book Test Now</button>
-  </div>
 
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/computer.png" alt="CT Scan">
-    <h3>CT Scan</h3>
-    <button>Book Test Now</button>
-  </div>
+<!-- Placeholder for service grid content -->
+<p style="text-align: center; color: #555;">Explore a wide range of advanced diagnostic and healthcare services at 99cure Healthcare.</p>
 
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/ultrasound.png" alt="Ultrasound">
-    <h3>Ultrasound</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/x-ray.png" alt="X-Ray">
-    <h3>Digital X-Ray</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/breast.png" alt="Mammography">
-    <h3>Mammography</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/bone.png" alt="Bone DEXA">
-    <h3>Bone DEXA</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/ekg.png" alt="ECG">
-    <h3>ECG</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/heart-monitor.png" alt="Echo">
-    <h3>Echo</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/treadmill.png" alt="TMT">
-    <h3>TMT</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/brain.png" alt="EEG">
-    <h3>EEG</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/nerves.png" alt="NCV">
-    <h3>NCV</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/muscle.png" alt="EMG">
-    <h3>EMG</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/test-tube.png" alt="Pathology">
-    <h3>Pathology Tests</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/lungs.png" alt="PFT">
-    <h3>Pulmonary Function Test (PFT)</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/jaw.png" alt="OPG">
-    <h3>OPG</h3>
-    <button>Book Test Now</button>
-  </div>
-
-  <div class="service-card">
-    <img src="https://img.icons8.com/ios-filled/50/toilet.png" alt="Uroflowmetry">
-    <h3>Uroflowmetry</h3>
-    <button>Book Test Now</button>
-  </div>
-</div>
-
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
-</a>
-
-<!-- Social Media Section -->
-<section style="background-color: #f1f8e9; padding: 3rem 1rem;">
-  <div style="max-width: 1200px; margin: auto; text-align: left;">
-    <h3 style="color: #2e7d32; margin-bottom: 1rem;">Follow us on:</h3>
-    <div class="social-icons" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-      <a href="https://www.instagram.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-      </a>
-      <a href="https://www.youtube.com/yourchannel" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-      </a>
-      <a href="https://twitter.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" />
-      </a>
-    </div>
-  </div>
-</section>
-
- 
 <script>
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
   }
-
-  // Close menu on nav link click (for mobile)
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
-      });
-    });
-  });
 </script>
-
-
-<!-- Quick Link Section -->
-<section style="background-color: #f1f8e9; padding: 2rem;">
-  <div style="max-width: 1200px; margin: auto; display: flex; justify-content: flex-start;">
-    <div style="text-align: left;">
-      <h2 style="color: #2e7d32; margin-bottom: 1rem;">Quick Links</h2>
-      <p><a href="about.html" style="color: #00C853; text-decoration: none;">&gt; About Us</a></p>
-      <p><a href="services.html" style="color: #00C853; text-decoration: none;">&gt; Our Services</a></p>
-      <p><a href="gallary.html" style="color: #00C853; text-decoration: none;">&gt; Gallery</a></p>
-      <p><a href="appointment.html" style="color: #00C853; text-decoration: none;">&gt; Book Appointment</a></p>
-      <p><a href="contact.html" style="color: #00C853; text-decoration: none;">&gt; Get in Touch</a></p>
-      <p><a href="health-packages.html" style="color: #00C853; text-decoration: none;">&gt; Health Packages</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- Get in Touch Section -->
-<section style="background-color: #f1f8e9; padding: 2rem; text-align: left;">
-  <div style="max-width: 1200px; margin: auto;">
-    <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong> 
-      <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
-    </p>
-    <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px; text-decoration: none;">Contact Us</a>
-  </div>
-</section>
-
-
-<section style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
-  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
- </section>
 
 </body>
 </html>
