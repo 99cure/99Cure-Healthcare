@@ -177,7 +177,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="gallary.html">Gallery</a>
+      <a href="gallery.html">Gallery</a>
       <a href="appointment.html">Appointment</a>
       <a href="contact.html">Contact</a>
       <a href="login.html">Login</a>
@@ -287,12 +287,21 @@
   </div>
 </section>
 
- 
  <script>
-   function toggleMenu() {
-     document.getElementById("navLinks").classList.toggle("active");
-   }
- </script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+
+  // Close menu on nav link click (for mobile)
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  });
+</script>
 
 <!-- Quick Link Section -->
 <section style="background-color: #f1f8e9; padding: 2rem;">
