@@ -147,6 +147,50 @@
       width: 32px;
       margin: 0 0.75rem;
     }
+    /* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #000;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #0f3f84;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   </style>
 </head>
 <body>
@@ -160,7 +204,16 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+     <div class="dropdown">
+  <a href="services.html" class="dropbtn">Services ▾</a>
+  <div class="dropdown-content">
+    <a href="#">Radiology Department</a>
+    <a href="#">Pathology Department</a>
+    <a href="#">Cardiology Department</a>
+    <a href="#">Neurology Department</a>
+    <a href="#">Other Test</a>
+  </div>
+</div>
       <a href="gallary.html">Gallery</a>
       <a href="appointment.html">Appointment</a>
       <a href="contact.html">Contact</a>
