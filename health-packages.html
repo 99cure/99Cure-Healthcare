@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Health Packages - 99cure Healthcare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #2e7d32;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background: gold;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #007BFF;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .hero {
+      background-color: #e8f5e9;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+    }
+
+    .packages-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .package-card {
+      background-color: #f1f8e9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .package-card h3 {
+      color: #2e7d32;
+    }
+
+    .package-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .package-card ul li {
+      padding: 0.3rem 0;
+    }
+
+    .package-card .price {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    .package-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #2e7d32;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo" style="display: flex; align-items: center;">
+    <img src="logo.png.jpg" alt="99cure Logo" style="height: 70px; border-radius: 8px;">
+    <span style="color: white; font-size: 1.8rem; margin-left: 8px;">99cure Healthcare</span>
+  </div>
+  <nav>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallary.html">Gallery</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Our Health Packages</h1>
+</div>
+
+<div class="packages-container">
+  <div class="package-card">
+    <h3>Basic Health Checkup</h3>
+    <ul>
+      <li>Complete Blood Count</li>
+      <li>Blood Sugar</li>
+      <li>Blood Pressure</li>
+      <li>Urine Test</li>
+    </ul>
+    <div class="price">₹499</div>
+    <a href="appointment.html">Book Now</a>
+  </div>
+
+  <div class="package-card">
+    <h3>Executive Health Plan</h3>
+    <ul>
+      <li>Liver & Kidney Profile</li>
+      <li>ECG & Chest X-Ray</li>
+      <li>Cholesterol Test</li>
+      <li>Vitamin D & B12</li>
+    </ul>
+    <div class="price">₹1299</div>
+    <a href="appointment.html">Book Now</a>
+  </div>
+
+  <div class="package-card">
+    <h3>Senior Citizen Package</h3>
+    <ul>
+      <li>Diabetes Panel</li>
+      <li>Thyroid Test</li>
+      <li>Heart Risk Markers</li>
+      <li>Eye & Hearing Check</li>
+    </ul>
+    <div class="price">₹999</div>
+    <a href="appointment.html">Book Now</a>
+  </div>
+</div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+</a>
+
+<footer>
+  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+</footer>
+  
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+
+  // Close menu on nav link click (for mobile)
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
