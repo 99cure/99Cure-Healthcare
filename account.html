@@ -3,97 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login / Signup - 99Cure Healthcare</title>
+  <title>Account - 99cure Healthcare</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #fff;
+      color: #2e7d32;
       margin: 0;
     }
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-    }
-    .tabs {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      cursor: pointer;
-      background: #eee;
-      border-radius: 5px;
-      margin: 0 5px;
-    }
-    .tab.active {
-      background: #007BFF;
-      color: white;
-    }
-    .form {
-      display: none;
-    }
-    .form.active {
-      display: block;
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      width: 100%;
+
+    header {
       background-color: #007BFF;
       color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    button:hover {
-      background-color: #0056b3;
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 70px;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 1.8rem;
+      margin-left: 10px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background: gold;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #007BFF;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 0.75rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  
-<header>
-  <div class="logo" style="display: flex; align-items: center;">
-    <img src="logo.png.jpg" alt="99cure Logo" style="height: 70px; border-radius: 8px;">
-    <span style="color: white; font-size: 1.8rem; margin-left: 8px;">99cure Healthcare</span>
-  </div>
-  <nav style="display: flex; align-items: center;">
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="health-packages.html">Healthcare Packages</a> 
-      <a href="appointment.html">Book Appointment</a>
-      <a href="contact.html">Contact</a>
-      <a href="account.html">Create Account</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>
-</header>
+  </style>
+</head>
+<body>
 
-  <div class="container">
+  <!-- Navigation Menu -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="gallary.html">Gallery</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="health-packages.html">Health Packages</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to Your Account</h1>
+    <div class="container">
     <div class="tabs">
       <div class="tab active" onclick="showForm('login')">Login</div>
       <div class="tab" onclick="showForm('signup')">Signup</div>
@@ -115,7 +180,7 @@
     </form>
   </div>
 
-  <script>
+    <script>
     function showForm(formId) {
       document.querySelectorAll(".form").forEach(f => f.classList.remove("active"));
       document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
@@ -123,80 +188,68 @@
       document.querySelector(`.tab[onclick="showForm('${formId}')"]`).classList.add("active");
     }
   </script>
-<!-- WhatsApp Chat Button -->
- <a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
- </a
+</body>
+</html>
+  </main>
 
- <!-- Social Media Section -->
-<section style="background-color: #f1f8e9; padding: 3rem 1rem;">
-  <div style="max-width: 1200px; margin: auto; text-align: left;">
-    <h3 style="color: #2e7d32; margin-bottom: 1rem;">Follow us on:</h3>
-    <div class="social-icons" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-      <a href="https://www.instagram.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-      </a>
-      <a href="https://www.youtube.com/yourchannel" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-      </a>
-      <a href="https://twitter.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" />
-      </a>
+  <!-- Social Media Section -->
+  <section style="background-color: #f1f8e9; padding: 3rem 1rem;">
+    <div style="max-width: 1200px; margin: auto; text-align: left;">
+      <h3 style="color: #2e7d32; margin-bottom: 1rem;">Follow us on:</h3>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+        <a href="https://www.instagram.com/yourhandle" target="_blank">
+          <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/yourhandle" target="_blank">
+          <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
+        </a>
+        <a href="https://www.youtube.com/yourchannel" target="_blank">
+          <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" />
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <script>
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-  }
-
-  // Close menu on nav link click (for mobile)
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
-      });
-    });
-  });
-</script>
-
-<!-- Quick Link Section -->
-<section style="background-color: #f1f8e9; padding: 2rem;">
-  <div style="max-width: 1200px; margin: auto; display: flex; justify-content: flex-start;">
-    <div style="text-align: left;">
+  <!-- Quick Links Section -->
+  <section style="background-color: #f1f8e9; padding: 2rem;">
+    <div style="max-width: 1200px; margin: auto;">
       <h2 style="color: #2e7d32; margin-bottom: 1rem;">Quick Links</h2>
-      <p><a href="about.html" style="color: #00C853; text-decoration: none;">&gt; About Us</a></p>
-      <p><a href="services.html" style="color: #00C853; text-decoration: none;">&gt; Our Services</a></p>
-      <p><a href="gallary.html" style="color: #00C853; text-decoration: none;">&gt; Gallery</a></p>
-      <p><a href="appointment.html" style="color: #00C853; text-decoration: none;">&gt; Book Appointment</a></p>
-      <p><a href="contact.html" style="color: #00C853; text-decoration: none;">&gt; Get in Touch</a></p>
-      <p><a href="health-packages.html" style="color: #00C853; text-decoration: none;">&gt; Health Packages</a></p>
+      <p><a href="index.html" style="color: #00C853;">&gt; Home</a></p>
+      <p><a href="about.html" style="color: #00C853;">&gt; About Us</a></p>
+      <p><a href="services.html" style="color: #00C853;">&gt; Our Services</a></p>
+      <p><a href="gallary.html" style="color: #00C853;">&gt; Gallery</a></p>
+      <p><a href="appointment.html" style="color: #00C853;">&gt; Book Appointment</a></p>
+      <p><a href="contact.html" style="color: #00C853;">&gt; Get in Touch</a></p>
+      <p><a href="health-packages.html" style="color: #00C853;">&gt; Health Packages</a></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Get in Touch Section -->
-<section style="background-color: #f1f8e9; padding: 2rem; text-align: left;">
-  <div style="max-width: 1200px; margin: auto;">
-    <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong> 
-      <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
-    </p>
-    <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px; text-decoration: none;">Contact Us</a>
-  </div>
-</section>
+  <!-- Get in Touch Section -->
+  <section style="background-color: #f1f8e9; padding: 2rem; text-align: left;">
+    <div style="max-width: 1200px; margin: auto;">
+      <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong>
+        <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
+      </p>
+      <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px;">Contact Us</a>
+    </div>
+  </section>
 
- <section style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
-  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
- </section>
-  
- </body>
- </html>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919211317319" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" style="width: 60px; height: 60px;" />
+  </a>
+
+  <!-- Footer -->
+  <footer style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
+    <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
