@@ -23,11 +23,6 @@
       flex-wrap: wrap;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
     .logo img {
       height: 70px;
       border-radius: 8px;
@@ -37,11 +32,6 @@
       font-size: 1.8rem;
       margin-left: 10px;
       color: white;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
     }
 
     .nav-links {
@@ -131,7 +121,7 @@
 
     .form button {
       padding: 0.7rem 1.5rem;
-      background: #007BFF; /* blue for login submit */
+      background: #007BFF; /* Blue login button */
       color: white;
       border: none;
       border-radius: 5px;
@@ -162,7 +152,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
+      z-index: 100;
     }
 
     .whatsapp-float img {
@@ -174,7 +164,7 @@
 <body>
 
   <header>
-    <div class="logo">
+    <div class="logo" style="display: flex; align-items: center;">
       <img src="logo.png.jpg" alt="99cure Logo">
       <span>99cure Healthcare</span>
     </div>
@@ -189,9 +179,7 @@
         <a href="account.html">Create Account</a>
       </div>
       <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </div>
     </nav>
   </header>
@@ -229,18 +217,10 @@
     <div style="max-width: 1200px; margin: auto; text-align: left;">
       <h3 style="color: #2e7d32; margin-bottom: 1rem;">Follow us on:</h3>
       <div class="social-icons" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-        <a href="https://www.instagram.com/yourhandle" target="_blank">
-          <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-        </a>
-        <a href="https://www.facebook.com/yourhandle" target="_blank">
-          <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-        </a>
-        <a href="https://www.youtube.com/yourchannel" target="_blank">
-          <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-        </a>
-        <a href="https://twitter.com/yourhandle" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" />
-        </a>
+        <a href="https://www.instagram.com/yourhandle" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/yourhandle" target="_blank"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" /></a>
+        <a href="https://www.youtube.com/yourchannel" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" /></a>
+        <a href="https://twitter.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" /></a>
       </div>
     </div>
   </section>
@@ -258,7 +238,6 @@
       document.querySelector(`.tab[onclick="showForm('${formId}')"]`).classList.add("active");
     }
 
-    // Close menu on nav link click (for mobile)
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".nav-links a").forEach(link => {
         link.addEventListener("click", () => {
@@ -268,39 +247,24 @@
     });
   </script>
 
-  <!-- Quick Link Section -->
+  <!-- Get in Touch Section (Centered) -->
   <section style="background-color: #f1f8e9; padding: 2rem;">
-    <div style="max-width: 1200px; margin: auto; display: flex; justify-content: flex-start;">
-      <div style="text-align: left;">
-        <h2 style="color: #2e7d32; margin-bottom: 1rem;">Quick Links</h2>
-        <p><a href="about.html" style="color: #00C853; text-decoration: none;">&gt; About Us</a></p>
-        <p><a href="services.html" style="color: #00C853; text-decoration: none;">&gt; Our Services</a></p>
-        <p><a href="gallary.html" style="color: #00C853; text-decoration: none;">&gt; Gallery</a></p>
-        <p><a href="appointment.html" style="color: #00C853; text-decoration: none;">&gt; Book Appointment</a></p>
-        <p><a href="contact.html" style="color: #00C853; text-decoration: none;">&gt; Get in Touch</a></p>
-        <p><a href="health-packages.html" style="color: #00C853; text-decoration: none;">&gt; Health Packages</a></p>
-      </div>
+    <div style="max-width: 1200px; margin: auto; text-align: center;">
+      <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
+      <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong>
+        <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
+      </p>
+      <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px; text-decoration: none;">Contact Us</a>
     </div>
   </section>
 
-<!-- Get in Touch Section -->
-<section style="background-color: #f1f8e9; padding: 2rem;">
-  <div style="max-width: 1200px; margin: auto; text-align: center;">
-    <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong>
-      <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
-    </p>
-    <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px; text-decoration: none;">Contact Us</a>
-  </div>
-</section>
-
-<!-- Footer Section -->
-<section style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
-  <p style="margin: 0;">&copy; 2025 99cure Healthcare. All rights reserved.</p>
-</section>
+  <!-- Footer (Centered Text) -->
+  <section style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
+    <p style="margin: 0;">&copy; 2025 99cure Healthcare. All rights reserved.</p>
+  </section>
 
 </body>
 </html>
