@@ -130,173 +130,76 @@
 <body>
 
 <header>
-  <div class="logo" style="display: flex; align-items: center;">
-    <img src="logo.png.jpg" alt="99cure Logo" style="height: 70px; border-radius: 8px;">
-    <span style="color: white; font-size: 1.8rem; margin-left: 8px;">99cure Healthcare</span>
-  </div>
-  <nav style="display: flex; align-items: center;">
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="health-packages.html">Healthcare Packages</a> 
-      <a href="appointment.html">Appointment</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>
-</header>
-
+   <div class="logo">99cure Healthcare</div>
+   <div class="logo" style="display: flex; align-items: center;">
+     <img src="logo.png.jpg" alt="99cure Logo" style="height: 50px; border-radius: 8px;">
+     <span style="color: white; font-size: 1.8rem; margin-left: 10px;">99cure Healthcare</span>
+   <nav>
+     <div class="nav-links" id="navLinks">
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="services.html">Services</a>
+       <a href="gallary.html">Gallery</a>
+       <a href="appointment.html">Appointment</a>
+       <a href="contact.html">Contact</a>
+       <a href="login.html">Login</a>
+       <a href="signup.html">Sign Up</a>
+     </div>
+     <div class="hamburger" onclick="toggleMenu()">
+       <div></div>
+       <div></div>
+       <div></div>
+     </div>
+   </nav>
+ </header>
  
- <div class="hero">
-   <h1>Your Health, Our Priority</h1>
- </div>
+ <main>
+   <h2>Book an Appointment</h2>
+   <form>
+     <input type="text" placeholder="Full Name" required />
+     <input type="tel" placeholder="Phone Number" required />
+     <input type="email" placeholder="Email Address" />
+     <select required>
+       <option value="">Select Department</option>
+       <option>General Medicine</option>
+       <option>Pediatrics</option>
+       <option>Cardiology</option>
+       <option>Diagnostics</option>
+     </select>
+     <input type="date" required />
+     <textarea placeholder="Additional Notes" rows="4"></textarea>
+     <button type="submit">Submit Appointment</button>
+   </form>
+ </main>
  
- <div class="centered-sections">
-   <div class="section-card">
-     <img src="https://img.icons8.com/ios-filled/50/2e7d32/medal.png" alt="Services" />
-     <h3><a href="services.html">Our Services</a></h3>
-     <p>Wide range of healthcare solutions to serve your needs.</p>
-   </div>
-   <div class="section-card">
-     <img src="https://img.icons8.com/ios-filled/50/2e7d32/health-checkup.png" alt="Packages" />
-     <h3><a href="health-packages.html">Health Packages</a></h3>
-     <p>Custom health checkups to keep you in shape.</p>
-   </div>
-   <div class="section-card">
-     <img src="https://img.icons8.com/ios-filled/50/2e7d32/appointment-reminders.png" alt="Book Test" />
-     <h3><a href="book-test.html">Book Your Test</a></h3>
-     <p>Easy and fast test bookings from home.</p>
-   </div>
-   <div class="section-card">
-     <img src="https://img.icons8.com/ios-filled/50/2e7d32/collaboration.png" alt="Partners" />
-     <h3><a href="partners.html">Our Partners</a></h3>
-     <p>We work with the best for your care.</p>
-   </div>
- </div>
- 
- <!-- WhatsApp Button -->
- <a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank">
+ <!-- WhatsApp Chat Button -->
+ <a href="https://wa.me/919211317319" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
- </a>
-  
- <!-- Why Choose Us Section -->
-<section style="background-color: #fff8e1; padding: 3rem 1rem; text-align: center;">
-  <h2 style="color: #2e7d32;">Why Choose Us</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-    <div style="max-width: 250px;">
-      <img src="https://img.icons8.com/ios-filled/50/2e7d32/clinic.png" alt="Modern Facilities" />
-      <h4>Modern Facilities</h4>
-      <p>Equipped with state-of-the-art medical tools and diagnostics.</p>
-    </div>
-    <div style="max-width: 250px;">
-      <img src="https://img.icons8.com/ios-filled/50/2e7d32/doctor-male.png" alt="Expert Doctors" />
-      <h4>Expert Doctors</h4>
-      <p>Experienced and certified healthcare professionals.</p>
-    </div>
-    <div style="max-width: 250px;">
-      <img src="https://img.icons8.com/ios-filled/50/2e7d32/24-hours.png" alt="24/7 Support" />
-      <h4>24/7 Support</h4>
-      <p>We’re here for you around the clock for emergencies or help.</p>
-    </div>
+ </a
+ 
+ <footer>
+   <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
+   <div class="social-icons">
+     <a href="https://www.instagram.com/yourhandle" target="_blank">
+       <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
+     </a>
+     <a href="https://www.facebook.com/yourhandle" target="_blank">
+       <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
+     </a>
+     <a href="https://www.youtube.com/yourchannel" target="_blank">
+       <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
+     </a>
+     <a href="https://twitter.com/yourhandle" target="_blank">
+       <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="X (Twitter)" />
+     </a>
    </div>
-</section>
-
-<!-- Customer Reviews Section -->
-<section style="background-color: #e8f5e9; padding: 3rem 1rem; text-align: center;">
-  <h2 style="color: #2e7d32;">What Our Customers Say</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-    <div style="background: white; padding: 1.5rem; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p>"Fast and friendly service! Booking tests was a breeze."</p>
-      <strong>- Anjali R.</strong>
-    </div>
-    <div style="background: white; padding: 1.5rem; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p>"The doctors and staff were very professional and caring."</p>
-      <strong>- Rakesh S.</strong>
-    </div>
-    <div style="background: white; padding: 1.5rem; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p>"Highly recommend 99cure for at-home diagnostics!"</p>
-      <strong>- Priya M.</strong>
-    </div>
-  </div>
-</section>
-  
-
-<!-- Social Media Section -->
-<section style="background-color: #f1f8e9; padding: 3rem 1rem;">
-  <div style="max-width: 1200px; margin: auto; text-align: left;">
-    <h3 style="color: #2e7d32; margin-bottom: 1rem;">Follow us on:</h3>
-    <div class="social-icons" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-      <a href="https://www.instagram.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" />
-      </a>
-      <a href="https://www.youtube.com/yourchannel" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" />
-      </a>
-      <a href="https://twitter.com/yourhandle" target="_blank" style="display: inline-block;">
-        <img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X (Twitter)" />
-      </a>
-    </div>
-  </div>
-</section>
-
+ </footer>
+ 
  <script>
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-  }
-
-  // Close menu on nav link click (for mobile)
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
-      });
-    });
-  });
-</script>
-
-<!-- Quick Link Section -->
-<section style="background-color: #f1f8e9; padding: 2rem;">
-  <div style="max-width: 1200px; margin: auto; display: flex; justify-content: flex-start;">
-    <div style="text-align: left;">
-      <h2 style="color: #2e7d32; margin-bottom: 1rem;">Quick Links</h2>
-      <p><a href="about.html" style="color: #00C853; text-decoration: none;">&gt; About Us</a></p>
-      <p><a href="services.html" style="color: #00C853; text-decoration: none;">&gt; Our Services</a></p>
-      <p><a href="gallary.html" style="color: #00C853; text-decoration: none;">&gt; Gallery</a></p>
-      <p><a href="appointment.html" style="color: #00C853; text-decoration: none;">&gt; Book Appointment</a></p>
-      <p><a href="contact.html" style="color: #00C853; text-decoration: none;">&gt; Get in Touch</a></p>
-      <p><a href="health-packages.html" style="color: #00C853; text-decoration: none;">&gt; Health Packages</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- Get in Touch Section -->
-<section style="background-color: #f1f8e9; padding: 2rem; text-align: left;">
-  <div style="max-width: 1200px; margin: auto;">
-    <h2 style="color: #2e7d32; margin-bottom: 1rem;">Get in Touch</h2>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; Need help or have questions? Reach out to us anytime.</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Phone:</strong> +91-9211317319</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>Email:</strong> contact@99cure.com</p>
-    <p style="margin: 0.5rem 0; color: #00C853;">&gt; <strong>WhatsApp:</strong> 
-      <a href="https://wa.me/919211317319" style="color: #2e7d32; text-decoration: underline;">+91-9211317319</a>
-    </p>
-    <a href="contact.html" style="display: inline-block; margin-top: 1rem; padding: 0.7rem 1.5rem; background: #2e7d32; color: white; border-radius: 5px; text-decoration: none;">Contact Us</a>
-  </div>
-</section>
-
- <section style="background-color: #555555; padding: 3rem 1rem; text-align: center; color: white;">
-  <p>&copy; 2025 99cure Healthcare. All rights reserved.</p>
- </section>
-  
+   function toggleMenu() {
+     document.getElementById("navLinks").classList.toggle("active");
+   }
+ </script>
+ 
  </body>
  </html>
